@@ -87,9 +87,7 @@ html, body {
 }
 
 .sign-up-form {
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateY(50%);
+  margin: auto;
   color: var(--secondary-text-color);
 }
 
@@ -167,26 +165,22 @@ html, body {
 }
 
 .icon-bar {
-  width: 100%;
-  height: 100%;
+  padding: 0 5px;
   background-color: #555; 
-  overflow: auto; 
-}
-
-.icon-bar .icon-bar-button {
-  float: left;
-  text-align: center;
-  width: 25%;
+  overflow: none; 
   height: 100%;
-  padding: 12px 0; 
-  transition: all 0.3s ease; 
-  background-color: #555;
-  color: white;
-  font-size: 28px; 
+  width: 100%
 }
 
-.icon-bar .icon-bar-button:hover {
-  background-color: black
+.icon-bar form {
+  height: 95%;
+  align-items: center;
+
+}
+
+.icon-bar input {
+  height: 95%;
+  width: 99%;
 }
 
 .pop-up-form {
@@ -229,7 +223,7 @@ html, body {
 }
 
 .search-results {
-  height: 60%;
+  height: 75%;
   overflow: auto;
 }
 
@@ -238,7 +232,9 @@ html, body {
 }
 
 .message {
-  margin: 15px 0;
+  margin: 15px 10px;
+  direction: ltr;
+  transform: rotate(180deg);
 }
 
 .message .message-username {
@@ -263,15 +259,8 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   background: var(--secondary-color);
-}
-
-.chat-window .join-room {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 34px;
-  font-weight: 300;
+  direction: rtl;
+  transform: rotate(180deg);
 }
 
 .send-message-form {
@@ -305,7 +294,7 @@ html, body {
   padding:0!important;
   font: inherit;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   /*border is optional*/
   border-bottom:1px solid #444; 
   cursor: pointer;

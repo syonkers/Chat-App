@@ -50,7 +50,13 @@ const reducer = (state = initialState, action) => {
 
         case types.UPDATE_SEARCH_RESULTS:
             return Object.assign({}, state, {
-                searchResults: action.results
+                searchResults: action.results,
+                showSearchRoomForm: true
+            });
+
+        case types.UPDATE_SEARCH_TEXT:
+            return Object.assign({}, state, {
+                searchText: action.text
             });
             
         case types.UPDATE_USERS:
@@ -58,26 +64,11 @@ const reducer = (state = initialState, action) => {
                 users: action.users
             });
 
-        case types.TOGGLE_CREATE_ROOM_FORM:
-            return Object.assign({}, state, {
-                showCreateRoomForm: !state.showCreateRoomForm,
-                showSearchRoomForm: false,
-                showSearchUserForm: false
-            });
-
         case types.TOGGLE_SEARCH_ROOM_FORM:
             return Object.assign({}, state, {
-                showCreateRoomForm: false,
                 showSearchRoomForm: !state.showSearchRoomForm,
-                showSearchUserForm: false,
-                searchResults: []
-            });
-            
-        case types.TOGGLE_SEARCH_USER_FORM:
-            return Object.assign({}, state, {
-                showCreateRoomForm: false,
-                showSearchRoomForm: false,
-                showSearchUserForm: !state.showSearchUserForm
+                searchResults: [],
+                searchText: ''
             });
 
         default:

@@ -6,6 +6,7 @@ const initialState = {
     messages: [],
     users: [],
     joinedRooms: [],
+    searchText: '',
     searchResults: [],
     errorMessage: '',
     showCreateRoomForm: false,

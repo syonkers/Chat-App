@@ -14,7 +14,7 @@ class SignUpForm extends React.Component {
 
     
     handleChange(e) {
-        if (e.target.value.length < 13) {
+        if (e.target.value.length <= 16) {
             this.setState({
                 username: e.target.value
             });
@@ -36,7 +36,7 @@ class SignUpForm extends React.Component {
         return (
             <form className="sign-up-form" onSubmit={(e) => this.handleSubmit(e, socket)}>
                 <h1>Enter a username</h1>
-                <h3>(Max 12 characters)</h3><br></br>
+                <h3>(Max 16 characters)</h3><br></br>
                 <input placeholder="Username..." type='text' onChange={this.handleChange} value={this.state.username} />
             </form>
         );
