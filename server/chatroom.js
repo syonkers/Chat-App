@@ -16,7 +16,7 @@ class Chatroom{
     }
 
     addMessage(message) {
-        this.messages.push(message);
+        this.messages.unshift(message);
     }
 };
 

@@ -9,8 +9,6 @@ const initialState = {
     searchText: '',
     searchResults: [],
     errorMessage: '',
-    showCreateRoomForm: false,
-    showSearchUserForm: false,
     showSearchRoomForm: false
 }
 

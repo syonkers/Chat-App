@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 let counter = 1;
 
 const messageList = messages => (
-    messages.map(i =>  <div className="message" key={counter++}> 
-                            <div className="message-username">{i.username}</div>
-                            <div className="message-text">{i.message}</div>
-                        </div>)
-);
+    messages.map(i =>  {
+        return(
+        <div className="message" key={counter++}> 
+            <div className="message-username">{i.username}</div>
+            <div className="message-text">{i.message}</div>
+        </div>)
+    }));
 
 
 

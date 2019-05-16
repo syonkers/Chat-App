@@ -30,7 +30,7 @@ const reducer = (state = initialState, action) => {
 
         case types.RECEIVE_MESSAGE:
             return Object.assign({}, state, {
-                messages: state.messages.concat(action.message)
+                messages: [action.message, ...state.messages]
             });
 
         case types.UPDATE_MESSAGES:
