@@ -300,6 +300,12 @@ html, body {
   cursor: pointer;
 }
 
+.cancel-btn {
+  color: rgb(247, 70, 57);
+  background-color: var(--main-color);
+  border: none;
+}
+
 .help-text {
   position: absolute;
   top: 10px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { GiCancel } from 'react-icons/gi';
 
 const handleClick = ( socket, roomname, currentRoomName, e ) => {
     e.preventDefault();
@@ -9,6 +9,11 @@ const handleClick = ( socket, roomname, currentRoomName, e ) => {
     }
 };
 
+const handleCancel = (socket, room, e) => {
+    e.preventDefault();
+    socket.emit('leaveChatroom', room);
+}
+
 
 const roomsList = (socket, joinedRooms, currentRoomName) => (
     joinedRooms.map(room => {
@@ -16,6 +21,11 @@ const roomsList = (socket, joinedRooms, currentRoomName) => (
         return (
         <li key={room} className={"room " + active}>
             <button className="btn-like-link" onClick={(e) => handleClick(socket, room, currentRoomName, e)}>{room}</button>
+            <span>
+                <button className="cancel-btn" onClick={(e) => handleCancel(socket, room, e)}>
+                    <GiCancel />
+                </button>
+            </span>
         </li>)
 }));
 

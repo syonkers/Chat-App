@@ -5,7 +5,7 @@ import toggleSearchRoomForm from '../../Actions/toggleSearchRoomForm';
 
 const handleChange = (dispatch, searchText, socket, e) => {
     e.preventDefault();
-    if (searchText.length <= 16) {
+    if (searchText.length <= 14) {
         dispatch(updateSearchText(e.target.value));
         socket.emit('searchChatrooms', e.target.value.toLowerCase());
     }
@@ -13,7 +13,7 @@ const handleChange = (dispatch, searchText, socket, e) => {
 
 const handleSubmit = (dispatch, searchText, socket, e) => {
     e.preventDefault();
-    if ( searchText.length > 0 && searchText.length <= 16) {
+    if ( searchText.length > 0 && searchText.length <= 14) {
         socket.emit('createChatroom', searchText);
         dispatch(toggleSearchRoomForm());
     }
