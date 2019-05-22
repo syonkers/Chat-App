@@ -10,7 +10,8 @@ const messageList = messages => (
             <div className="message-username">{i.username}</div>
             <div className="message-text">{i.message}</div>
         </div>)
-    }));
+    })
+);
 
 
 

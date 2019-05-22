@@ -8,6 +8,6 @@ const Sidebar = () => (
         <ChatroomList />
         <UserList />
     </div>
-)
+);
 
 export default Sidebar

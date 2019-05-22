@@ -7,7 +7,7 @@ const handleClick = ( socket, roomname, currentRoomName, e ) => {
     if (currentRoomName !== roomname) {
         socket.emit('joinChatroom', roomname);
     }
-};
+}
 
 const handleCancel = (socket, room, e) => {
     e.preventDefault();
@@ -27,7 +27,8 @@ const roomsList = (socket, joinedRooms, currentRoomName) => (
                 </button>
             </span>
         </li>)
-}));
+    })
+);
 
 
 const ChatRoomList = ({socket, joinedRooms, currentRoomName }) => (

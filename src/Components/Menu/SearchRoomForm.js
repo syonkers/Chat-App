@@ -4,7 +4,7 @@ import toggleSearchRoomForm from '../../Actions/toggleSearchRoomForm';
 
 class SearchRoomForm extends React.Component {
     constructor(){
-        super()
+        super();
         this.handeClick = this.handleClick.bind(this);
     }
 
