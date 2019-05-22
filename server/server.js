@@ -85,9 +85,11 @@ io.on('connection', function(socket){
 
     // Handler for when user sends a message
     socket.on('sendMessage', function(data) {
-        let targetRoom = getRoomFromName(data.destination);
-        targetRoom.addMessage(data);
-        io.to(data.destination).emit('receiveMessage', data);
+        if (data.message.length > 0) {
+            let targetRoom = getRoomFromName(data.destination);
+            targetRoom.addMessage(data);
+            io.to(data.destination).emit('receiveMessage', data);
+        }
     });
 
 

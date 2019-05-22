@@ -21,14 +21,16 @@ class SendMessageForm extends React.Component {
 
     handleSubmit(e, socket, username, currentRoomName) {
         e.preventDefault();
-        socket.emit('sendMessage', {
-            message: this.state.message,
-            username: username,
-            destination: currentRoomName
-        }); 
-        this.setState({
-            message: ''
-        });
+        if (this.state.message.length > 0 ) {
+            socket.emit('sendMessage', {
+                message: this.state.message,
+                username: username,
+                destination: currentRoomName
+            }); 
+            this.setState({
+                message: ''
+            });
+        }   
     }
 
     render() {
