@@ -1,5 +1,7 @@
 # Chat Application using React + Redux
 
+![ScreenShot](./public/screenshots/screenshot.png?raw=true)
+
 ## Requirements
 
 For development, you will only need Node.js installed on your environement.
