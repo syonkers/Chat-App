@@ -1,4 +1,4 @@
-import React,{ useEffect, useRef } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import updateSearchText from '../../Actions/updateSearchText';
 import toggleSearchRoomForm from '../../Actions/toggleSearchRoomForm';
@@ -37,10 +37,3 @@ const mapStateToProps = store => ({
 });
 
 export default connect(mapStateToProps)(SearchBar)
-
-/*<div className="icon-bar">
-        <form >
-            <input type="text" placeholder="Create / Search Room" required/>
-        </form>
-    </div> 
-);*/

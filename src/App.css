@@ -242,7 +242,19 @@ html, body {
   color: var(--main-text-color);
   opacity: 0.9;
   margin-bottom: 6px;
+  margin-right: 15px; 
+  display: inline-block;
 }
+
+.message .message-timestamp {
+  font-size: 13px;
+  display: inline-block;
+}
+
+.message .message-box {
+  display: block;
+}
+
 .message .message-text {
   background: var(--message-color);
   color: var(--secondary-color);
