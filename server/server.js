@@ -10,8 +10,6 @@ io.rooms = [defaultRoom];
 
 
 io.on('connection', function(socket){
-    console.log('a user has connected');
-
     // Handler for when user first logs in
     socket.on('register', function(username){
         if (Object.values(io.sockets.sockets).filter(socket => socket.username === username.toLowerCase()).length > 0) {
@@ -134,7 +132,6 @@ io.on('connection', function(socket){
 
     // Handler for when user disconnects
     socket.on('disconnect', function() {
-        console.log('socket disconnect...', socket.id);
         // remove user from all custom chatroom objects
         io.rooms.forEach(room => {
             if (room.users.includes(socket.username)) {
